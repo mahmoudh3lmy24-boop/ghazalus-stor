@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F0E6;
+    color: #4B2E1E;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* الشريط العلوي الأول */
+.header {
+    background-color: #005F73;
+    padding: 15px 0;
+    color: white;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: #0A9396;
+}
+
+.cart-icon {
+    font-size: 20px;
+}
+
+/* الشريط العلوي الثاني */
+.secondary-nav {
+    background-color: #D9C6A5;
+    padding: 10px 0;
+}
+
+.secondary-nav .container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.secondary-nav a {
+    color: #4B2E1E;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.secondary-nav a:hover {
+    color: #005F73;
+}
+
+/* قسم العروض */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #0A9396;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #6A4C93;
+}
+
+/* قسم التصنيفات */
+.categories {
+    padding: 60px 0;
+}
+
+.categories h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #4B2E1E;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    padding: 20px;
+    text-align: center;
+    color: #005F73;
+}
+
+/* قسم المنتجات */
+.products {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #4B2E1E;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: #F5F0E6;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 15px;
+    color: #4B2E1E;
+}
+
+.price {
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #005F73;
+}
+
+.order-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0A9396;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #6A4C93;
+}
+
+/* الفوتر */
+.footer {
+    background-color: #4B2E1E;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* التصميم للموبايل */
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .secondary-nav .container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
